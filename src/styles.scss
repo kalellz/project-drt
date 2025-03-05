@@ -1,1 +1,16 @@
-/* You can add global styles to this file, and also import other style files */
+*{
+    font-family: 'Montserrat', 'Inter', sans-serif;
+}
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+}
+body{
+    background-color: #ECF0F1;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+$primary-color: #068488;
+$secundary-color: #324b4c;
+$accent-color: #00c6cf;
+$placeholder-text: #D3D3D3;
