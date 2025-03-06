@@ -2,7 +2,7 @@
 div{
     display: flex;
     flex-direction: column;
-    margin: 0.5em 0;
+    margin-top: 0.5em;
     label{
         font-size: 1em;
         font-family: 'Montserrat', sans-serif;
@@ -11,7 +11,13 @@ div{
     input{
         border: #D3D3D3 1px solid;
         border-radius: 0.5em;
-        padding: 1em 1em;
+        padding: 1em;
+        transition: transform 0.5s;
+    }
+    input:focus{
+        outline: none;
+        transform: scale(1.005);
+        caret-color: styles.$primary-color ;
     }
     input::placeholder{
         color: styles.$placeholder-text;

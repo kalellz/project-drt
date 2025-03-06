@@ -1,20 +1,29 @@
 <main class="login-page">
     <section class="login-main">
         <div class="login-welcome">
-            <div></div>
-            <div></div>
+            <div class="login-link">
+                <a href="home">projectDRT.com</a>
+            </div>
+            <div class="login-welcome-content">
+                <img src="assets/images/icon.png" >
+                <h1>Seja Bem-Vindo!</h1>
+            </div>
         </div>
         <div class="login-content">
-            <h1>Faça seu Login</h1>
+            <h1>Faça Seu Login</h1>
             <div class="login-inputs">
                 <app-input [label]="'E-mail'" [type]="'text'" [placeholder]="'kalel.rodrigues@icloud.com'"/>
                 <app-input [label]="'Senha'" [type]="'password'" [placeholder]="'************************'"/>
             </div>
             <div class="login-inputs-select">
-                
+                <div class="login-inputs-password">
+                    <input type="checkbox" id="meuCheckbox">
+                    <label for="meuCheckbox" class="checkbox-label">Lembrar Senha</label>
+                </div>
+                <a href="password">Esqueci Minha Senha</a>
             </div>
             <button>Entrar</button>
-                <h3>Não possui uma conta? <a href="cadastro">Cadastre-se</a></h3>
+            <h4>Não possui uma conta? <a href="cadastro">Cadastre-se</a></h4>
         </div>
     </section>
 </main>

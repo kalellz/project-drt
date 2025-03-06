@@ -17,6 +17,29 @@
             width: 40%;
             height: 100%;
             background-color: styles.$primary-color;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            .login-link{
+                top: 0;
+                left: 0;
+                position: absolute;
+                display: flex;
+                padding: 1em;
+                a{
+                    text-decoration: none;
+                    color: #fff;
+                }
+            }
+            .login-welcome-content{
+                display: flex;
+                flex-direction: column;
+                color: #fff;
+                h1{
+                    font-size: 2em;
+                }
+            }
         }
         .login-content{
             width: 60%;
@@ -26,6 +49,10 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            h1{
+                font-size: 2em;
+                font-weight: 600;
+            }
             .login-inputs{
                 width: 60%;
                 height: auto;
@@ -33,7 +60,72 @@
                 flex-direction: column;
             }
             .login-inputs-select{
-                
+                width: 60%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 1em 0;
+                .login-inputs-password{
+                    display: flex;
+                }
+                input[type="checkbox"] {
+                    display: none;
+                  }
+                  
+                  /* Estiliza a label para parecer um checkbox */
+                  .checkbox-label {
+                    display: inline-flex;
+                    align-items: center;
+                    cursor: pointer;
+                  
+                    &::before {
+                      content: "";
+                      width: 15px;
+                      height: 15px;
+                      border: 1px solid styles.$primary-color;
+                      border-radius: .3em;
+                      transition: background 0.3s;
+                      margin-right: .5em;
+                    }
+                  }
+                  
+                  /* Quando o checkbox estiver marcado */
+                  input[type="checkbox"]:checked + .checkbox-label::before {
+                    background: styles.$primary-color;
+                    content: "✔";
+                    color: white;
+                    font-size: 1em;
+                    text-align: center;
+                    line-height: 1.2em;
+                  }
+                label, a{
+                    font-size: .8em;
+                    color: #4D4D4D;
+                }
+                a{
+                    color: styles.$primary-color;
+                    text-decoration: none;
+                }
+            }
+            button{
+                width: 60%;
+                padding: 1em 0;
+                border-radius: 0.5em;
+                font-size: 1em;
+                font-weight: 500;
+                border: none;
+                background-color: styles.$primary-color;
+                color: #fff;
+                transition: transform .5s;
+            }
+            button:hover{
+                transform: scale(1.01);
+            }
+            h4{
+                color: #4D4D4D;
+                a{
+                    color: styles.$primary-color;
+                }
             }
         }
     }

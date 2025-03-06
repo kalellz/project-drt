@@ -8,5 +8,4 @@ import { InputComponent } from "../shared/input/input.component";
   styleUrl: './login.component.scss'
 })
 export class LoginComponent {
-
 }
