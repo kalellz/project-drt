@@ -1,0 +1,12 @@
+<main class="sidebar">
+    <section class="sidebar-logo">
+        <img src="images/icon-black.png" alt="">
+        <h1>DRT</h1>
+    </section>
+    <ul class="sidebar-content">
+        <li *ngFor="let item of sideBarItems" class="sidebar-item">
+            <img [src]="item.icon" >
+            <a [href]="item.route"> {{ item.title }} </a> 
+        </li>
+    </ul>          
+</main>
