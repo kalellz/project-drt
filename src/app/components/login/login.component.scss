@@ -68,37 +68,102 @@
                 .login-inputs-password{
                     display: flex;
                 }
-                input[type="checkbox"] {
+                .ios-checkbox {
+                    --checkbox-size: 1.3em;
+                    --checkbox-color: #068488;
+                    --checkbox-bg: #068488;
+                    --checkbox-border: #068488;
+                  
+                    position: relative;
+                    display: inline-block;
+                    cursor: pointer;
+                    user-select: none;
+                    -webkit-tap-highlight-color: transparent;
+                  }
+                  
+                  .ios-checkbox input {
                     display: none;
                   }
                   
-                  /* Estiliza a label para parecer um checkbox */
-                  .checkbox-label {
-                    display: inline-flex;
-                    align-items: center;
-                    cursor: pointer;
+                  .checkbox-wrapper {
+                    position: relative;
+                    width: var(--checkbox-size);
+                    height: var(--checkbox-size);
+                    transition: transform 0.2s ease;
+                  }
                   
-                    &::before {
-                      content: "";
-                      width: 15px;
-                      height: 15px;
-                      border: 1px solid styles.$primary-color;
-                      border-radius: .3em;
-                      transition: background 0.3s;
-                      margin-right: .5em;
+                  .checkbox-bg {
+                    position: absolute;
+                    inset: 0;
+                    border-radius: .3em;
+                    border: 2px solid var(--checkbox-border);
+                    background: white;
+                    transition: all 0.2s ease;
+                  }
+                  
+                  .checkbox-icon {
+                    position: absolute;
+                    inset: 0;
+                    margin: auto;
+                    width: 80%;
+                    height: 80%;
+                    color: white;
+                    transform: scale(0);
+                    transition: all 0.2s ease;
+                  }
+                  
+                  .check-path {
+                    stroke-dasharray: 40;
+                    stroke-dashoffset: 40;
+                    transition: stroke-dashoffset 0.3s ease 0.1s;
+                  }
+                  
+                  /* Checked State */
+                  .ios-checkbox input:checked + .checkbox-wrapper .checkbox-bg {
+                    background: var(--checkbox-color);
+                    border-color: var(--checkbox-color);
+                  }
+                  
+                  .ios-checkbox input:checked + .checkbox-wrapper .checkbox-icon {
+                    transform: scale(1);
+                  }
+                  
+                  .ios-checkbox input:checked + .checkbox-wrapper .check-path {
+                    stroke-dashoffset: 0;
+                  }
+                  
+                  /* Hover Effects */
+                  .ios-checkbox:hover .checkbox-wrapper {
+                    transform: scale(1.03);
+                  }
+                  
+                  /* Active Animation */
+                  .ios-checkbox:active .checkbox-wrapper {
+                    transform: scale(0.95);
+                  }
+                  
+                  /* Focus Styles */
+                  .ios-checkbox input:focus + .checkbox-wrapper .checkbox-bg {
+                    box-shadow: 0 0 0 4px var(--checkbox-bg);
+                  }
+                  
+                  
+                  /* Animation */
+                  @keyframes bounce {
+                    0%,
+                    100% {
+                      transform: scale(1);
+                    }
+                    50% {
+                      transform: scale(1.05);
                     }
                   }
                   
-                  /* Quando o checkbox estiver marcado */
-                  input[type="checkbox"]:checked + .checkbox-label::before {
-                    background: styles.$primary-color;
-                    content: "✔";
-                    color: white;
-                    font-size: 1em;
-                    text-align: center;
-                    line-height: 1.2em;
+                  .ios-checkbox input:checked + .checkbox-wrapper {
+                    animation: bounce 0.3s cubic-bezier(0.4, 0, 0.2, 1);
                   }
-                label, a{
+                  
+                p, a{
                     font-size: .8em;
                     color: #4D4D4D;
                 }
