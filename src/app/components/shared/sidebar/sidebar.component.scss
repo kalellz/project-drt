@@ -39,9 +39,9 @@
           transition: background-color 0.5s ease, transform 0.2s ease;
           
           a {
+            user-select: none;
             color: #364356;
-            width: 100%;
-            font-size: 1em;
+            font-size: 1vw;
             text-decoration: none;
             transition: color 0.5s ease;
             padding: 0 1em;

@@ -78,9 +78,6 @@
                 }
                 .ios-checkbox {
                     --checkbox-size: 1.3em;
-                    --checkbox-color: #068488;
-                    --checkbox-bg: #068488;
-                    --checkbox-border: #068488;
                     display: flex;
                     align-items: center;
                     justify-content: center;
@@ -104,7 +101,7 @@
                     position: absolute;
                     inset: 0;
                     border-radius: .3em;
-                    border: 2px solid var(--checkbox-border);
+                    border: 2px solid styles.$primary-color;
                     background: white;
                     transition: all 0.2s ease;
                   }
@@ -128,8 +125,8 @@
                   
                   /* Checked State */
                   .ios-checkbox input:checked + .checkbox-wrapper .checkbox-bg {
-                    background: var(--checkbox-color);
-                    border-color: var(--checkbox-color);
+                    background: styles.$primary-color;
+                    border-color: styles.$primary-color;
                   }
                   
                   .ios-checkbox input:checked + .checkbox-wrapper .checkbox-icon {
@@ -152,7 +149,7 @@
                   
                   /* Focus Styles */
                   .ios-checkbox input:focus + .checkbox-wrapper .checkbox-bg {
-                    box-shadow: 0 0 0 4px var(--checkbox-bg);
+                    box-shadow: 0 0 0 4px styles.$primary-color;
                   }
                   
                   

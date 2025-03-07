@@ -17,7 +17,7 @@ div{
     }
     input:focus{
         outline: none;
-        transform: scale(1.005);
+        transform: scale(1.01);
         caret-color: styles.$primary-color ;
     }
     input::placeholder{
