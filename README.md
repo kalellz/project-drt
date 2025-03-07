@@ -1,6 +1,6 @@
 # 📌 Sistema de Ponto e Gestão
 
-Um sistema web para controle de ponto e gerenciamento de equipes, desenvolvido em **Angular** para o frontend e **Node.js + PostgreSQL** para o backend.
+Um sistema web para controle de ponto e gerenciamento de equipes, desenvolvido em **Angular** para o frontend e **Deno + PostgreSQL** para o backend.
 
 ## 🌎 Demonstração
 🚧 *Adicione aqui o link da aplicação quando estiver hospedada.*
@@ -25,7 +25,7 @@ Um sistema web para controle de ponto e gerenciamento de equipes, desenvolvido e
 ---
 
 ## 🛠️ Tecnologias Utilizadas
-- **Frontend:** Angular, TypeScript, TailwindCSS
-- **Backend:** Node.js, Express, Sequelize
+- **Frontend:** Angular, TypeScript
+- **Backend:** Deno, Oak (framework)
 - **Banco de Dados:** PostgreSQL
 - **Autenticação:** JWT (JSON Web Token)
