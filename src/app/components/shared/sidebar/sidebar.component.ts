@@ -10,7 +10,7 @@ import { CommonModule } from '@angular/common'; // ✅ Importação necessária
 export class SidebarComponent {
   sideBarItems = [
     { title: 'Dashboard',     icon: 'images/dash.svg',  route: '/dashboard' },
-    { title: 'Perfil',        icon: 'images/user.svg',     route: '/profile'   },
+    { title: 'Meu Perfil',        icon: 'images/user.svg',     route: '/profile'   },
     { title: 'Configurações', icon: 'images/settings.svg',   route: '/settings'  },
     { title: 'Meus Pontos',   icon: 'images/diploma.svg',     route: '/points'    },
     { title: 'Minha Esquipe', icon: 'images/team.svg',       route: '/team'      }
