@@ -8,10 +8,10 @@ Um sistema web para controle de ponto e gerenciamento de equipes, desenvolvido e
 ---
 
 ## 🎨 Protótipo (Figma)
-🔗 [Link para o Figma](#https://www.figma.com/design/N1MIvo2vFjiN3XkNKsa26d/Portfolio?node-id=30-226&t=kgIGdlrzz27gN5w0-1)
+🔗 [Link para o Figma](https://www.figma.com/design/N1MIvo2vFjiN3XkNKsa26d/Portfolio?node-id=30-226&t=kgIGdlrzz27gN5w0-1)
 
 ## 📋 Planejamento (Trello)
-🔗 [Link para o Trello](#https://trello.com/invite/b/67cb2327d265e84eb629f13a/ATTIe21330b8525f0542e99b99ac01415ad458DA50DA/sistema-de-ponto-e-gestao-angular) 
+🔗 [Link para o Trello](https://trello.com/invite/b/67cb2327d265e84eb629f13a/ATTIe21330b8525f0542e99b99ac01415ad458DA50DA/sistema-de-ponto-e-gestao-angular)
 
 ---
 
