@@ -1,6 +1,7 @@
 @use '../../../../styles.scss' as styles;
 
 .sidebar{
+    position: fixed; 
     width: 15vw;
     height: 100vh;
     background-color: white;
@@ -37,7 +38,7 @@
           cursor: pointer;
           border-radius: 1em;
           transition: background-color 0.5s ease, transform 0.2s ease;
-          
+        
           a {
             user-select: none;
             color: #364356;
@@ -46,30 +47,46 @@
             transition: color 0.5s ease;
             padding: 0 1em;
           }
-      
+        
           img {
             height: 100%;
             filter: invert(0) brightness(1);
             transition: filter 0.3s ease-in-out;
           }
-      
+        
           &:hover {
             transform: scale(1.05);
             background-color: styles.$primary-color;
-            
+        
             a {
               color: #fff;
             }
-      
+        
             img {
               filter: invert(1) brightness(2);
             }
           }
-      
+        
           &:active {
             transform: scale(0.95);
             transition: transform 0.1s ease;
           }
+        }
+        // **Estilizando o item ativo**
+        .sidebar-item-select {
+          background-color: styles.$primary-color; 
+          color: white;
+        
+          a {
+            color: white;
+          }
+        
+          img {
+            filter: invert(1) brightness(2);
+          }
+        }
+        .sidebar-item-select{
+
         }
       }
       

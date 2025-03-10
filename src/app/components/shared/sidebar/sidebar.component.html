@@ -4,9 +4,12 @@
         <h1>DRT</h1>
     </section>
     <ul class="sidebar-content">
-        <li *ngFor="let item of sideBarItems" class="sidebar-item">
-            <img [src]="item.icon" >
-            <a [href]="item.route"> {{ item.title }} </a> 
-        </li>
-    </ul>          
+        <li *ngFor="let item of sideBarItems"
+            (click)="setActive(item.route)"
+            [class.sidebar-item-select]="selectedItem === item.route"
+            class="sidebar-item">
+            <img [src]="item.icon">
+            <a>{{ item.title }}</a> 
+        </li>                            
+      </ul>  
 </main>

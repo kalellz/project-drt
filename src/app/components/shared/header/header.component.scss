@@ -1,8 +1,144 @@
-.header{
+.header {
+    display: flex;
+    justify-content: space-between;
     position: fixed;
     top: 0;
     right: 0;
-    width: 85vw;
+    width: 82%;
+    left: 15vw; /* O header começa após a sidebar */
     background-color: #fff;
     height: 15vh;
+    align-items: center;
+    padding: 0 2rem;
+    .Header-Router{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img{
+            width: 2em;
+        }
+    }
+    .Header-Funcs{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 15vh;
+        .bell-box{
+            padding: 0 .5em;
+            transition: transform 0.3s ease;
+            height: 1.5em;
+            position: relative;
+            .bell{
+                width: 1.5em;
+                height: 1.5em;
+                transition: transform 0.3s ease;
+                cursor: pointer;
+            }
+            .bell-icon {
+                width: .5em;
+                height: .5em;
+                position: absolute;
+                top: 0;
+                right: .5em;
+                border-radius: 50%;
+            }
+            &:hover {
+                transform: scale(1.1);
+        }
+        }
+        .search-box {
+            height: 1.5em;
+            display: flex;
+            align-items: center;
+            position: relative;
+            cursor: pointer;
+            padding: 0 .5em;
+            .search-icon {
+                width: 1.5em;
+                height: 1.5em;
+                transition: transform 0.3s ease;
+            }
+    
+            .search-input {
+                width: 0;
+                opacity: 0;
+                padding: 1rem 0.6rem;
+                border: none;
+                border-radius: .5em;
+                outline: none;
+                font-size: 1rem;
+                transition: width 0.3s ease, opacity 0.3s ease;
+                background-color: white;
+                box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+                position: absolute;
+                left: 100%;
+            }
+    
+            .search-input.visible {
+                width: 10vw;
+                opacity: 1;
+            }
+    
+            &:hover .search-icon {
+                transform: scale(1.1);
+            }
+        }
+        .Header-Profile {
+            display: flex;
+            align-items: center;
+            justify-content: space-between; // Melhor distribuição dos elementos
+            height: 50%;
+            gap: 1rem; // Espaço entre os elementos
+        
+            .Header-Profile-Texts {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: end;
+                max-height: 100%; // Garante que o conteúdo não ultrapasse a altura do container
+                flex-shrink: 1; // Permite que o texto reduza se necessário
+                max-width: 15vw; // Limite de largura do texto
+                overflow: hidden; // Garante que o texto não ultrapasse
+                h1 {
+                    font-size: 1.2em;
+                    color: #636D77;
+                    white-space: nowrap; // Evita quebra de linha
+                    line-height: 1.2; // Ajusta o espaçamento das linhas para evitar estouro
+                    overflow: hidden; 
+                    text-overflow: ellipsis; // Adiciona "..." se ultrapassar o limite
+                    margin: 0; // Remove margens extras que podem causar o problema
+                }
+        
+                p {
+                    font-weight: 600;
+                    font-size: 1.1em;
+                    color: #A0A3BD;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    margin: 0;
+                }
+            }
+        
+            .Header-Profile-Icon {
+                display: flex;
+                align-items: center;
+                position: relative;
+                width: 20%;           
+                .Profile-Icon {
+                    width: 3em;
+                    height: 3em;
+                }
+            
+                .Status-Icon {
+                    width: 1em;
+                    height: 1em;
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                    border-radius: 50%;
+                }
+            }            
+        }        
+    }
 }

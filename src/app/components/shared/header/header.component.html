@@ -1,3 +1,37 @@
 <main class="header">
-    
+    <section class="Header-Router">
+        <h1>Gestor</h1>
+        <img src="images/arrow.svg">
+        <p>Dashboard</p>
+    </section>
+    <section class="Header-Funcs">
+        <div class="bell-box">
+            <img src="images/bell.svg" class="bell">
+            <img [src]="bellStatus === 'have' ? '/images/bell-have.svg' : '/images/bell-dhave.svg'" class="bell-icon" >
+        </div>
+        <div class="search-box">
+            <img 
+                src="images/search.svg" 
+                alt="Pesquisar" 
+                class="search-icon" 
+                (click)="toggleSearch()"
+            />
+            <input 
+                type="text" 
+                class="search-input" 
+                [class.visible]="isSearchVisible" 
+                placeholder="Pesquisar..." 
+            />
+        </div>
+        <div class="Header-Profile">
+            <div class="Header-Profile-Texts">
+                <h1>Victor Menezes</h1>
+                <p>Funcionario</p>
+            </div>
+            <div class="Header-Profile-Icon">
+                <img src="images/Avatar.svg" class="Profile-Icon">
+                <img [src]="userStatus === 'online' ? '/images/status-green.svg' : '/images/status-red.svg'" class="Status-Icon" >
+            </div>
+        </div>
+    </section>
 </main>
