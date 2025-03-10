@@ -1,0 +1,8 @@
+<div class="points-filter">
+    <p>{{title}}</p>
+    <input type="number"
+    [placeholder]="getPlaceholder()"
+    [value]="currentValue" 
+    readonly
+    (mousedown)="onMouseDown($event)">
+</div>

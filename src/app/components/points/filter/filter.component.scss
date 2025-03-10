@@ -1,0 +1,33 @@
+.points-filter{
+    display: flex;
+    p{
+        margin: 0;
+        padding: 0;
+        color: #3C4261;
+        font: 1em;
+        padding: 0 .5em;
+        font-weight: 600;
+    }
+    input{
+        cursor: ns-resize;
+        width: 25%;
+        border: solid 1px #D4D4D4;
+        border-radius: .5em;
+        background-color: rgba(60, 66, 97, 0.03);
+        display: flex;
+        text-align: center;
+        font-size: 0.7em;
+        caret-color: #3C4261;
+        transition: transform .5s;
+        &:focus{
+            user-select: none;
+            transform: scale(1.1);
+            outline: none;
+        }
+    }
+    input[type="number"]::-webkit-outer-spin-button,
+    input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    }
+}

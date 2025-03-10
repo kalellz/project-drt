@@ -1,0 +1,24 @@
+.points{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    .points-main{
+        width: 82%;
+        height: 80%;
+        padding: 1vh 1vw;
+        display: flex;
+        flex-direction: column;
+        .point-table{
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+        }
+        .point-filters{
+            display: flex;
+            align-items: center;
+            padding: 0 0 1em 0;
+        }
+    }
+}
