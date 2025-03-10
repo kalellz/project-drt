@@ -1,59 +1,31 @@
-# ProjectDRT
+# 📌 Sistema de Ponto e Gestão
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.1.
+Um sistema web para controle de ponto e gerenciamento de equipes, desenvolvido em **Angular** para o frontend e **Deno + PostgreSQL** para o backend.
 
-## Development server
+## 🌎 Demonstração
+🚧 *Adicione aqui o link da aplicação quando estiver hospedada.*
 
-To start a local development server, run:
+---
 
-```bash
-ng serve
-```
+## 🎨 Protótipo (Figma)
+🔗 [Link para o Figma](https://www.figma.com/design/N1MIvo2vFjiN3XkNKsa26d/Portfolio?node-id=30-226&t=kgIGdlrzz27gN5w0-1)
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## 📋 Planejamento (Trello)
+🔗 [Link para o Trello](https://trello.com/invite/b/67cb2327d265e84eb629f13a/ATTIe21330b8525f0542e99b99ac01415ad458DA50DA/sistema-de-ponto-e-gestao-angular)
 
-## Code scaffolding
+---
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## ✨ Funcionalidades
+✅ Registro de ponto (entrada, saída, intervalo)  
+✅ Configuração de perfil do funcionário  
+✅ Gestão de horários pelo gestor  
+✅ Visualização da equipe e status online/offline  
+✅ Relatórios de trajeto do dia  
 
-```bash
-ng generate component component-name
-```
+---
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## 🛠️ Tecnologias Utilizadas
+- **Frontend:** Angular, TypeScript
+- **Backend:** Deno, Oak (framework)
+- **Banco de Dados:** PostgreSQL
+- **Autenticação:** JWT (JSON Web Token)
