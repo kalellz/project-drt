@@ -1,28 +1,38 @@
 <table class="Table">
-    <thead>
-      <tr>
-        <th (click)="sortData('date')">
-          <span class="sort-icon">Data {{ sortDirection['date'] === 'asc' ? '▲' : '▼' }}</span>
-        </th>
-        <th>Entrada e Saída</th>
-        <th (click)="sortData('type')">
-          <span class="sort-icon">Tipo {{ sortDirection['type'] === 'asc' ? '▲' : '▼' }}</span>
-        </th>
-        <th (click)="sortData('status')">
-          <span class="sort-icon">Status {{ sortDirection['status'] === 'asc' ? '▲' : '▼' }}</span>
-        </th>
-        <th>Ações</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let record of sortedData">
-        <td>{{ record.date }}</td>
-        <td>{{ record.entry }} - {{ record.exit }}</td>
-        <td>{{ record.type }}</td>
-        <td>{{ record.status }}</td>
-        <td>
-          <button *ngFor="let action of record.actions">{{ action }}</button>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <thead>
+    <tr>
+      <th (click)="sortData('date')">
+        <span class="sort-icon">Data {{ sortDirection['date'] === 'asc' ? '▲' : '▼' }}</span>
+      </th>
+      <th>Entrada e Saída</th>
+      <th (click)="sortData('type')">
+        <span class="sort-icon">Tipo {{ sortDirection['type'] === 'asc' ? '▲' : '▼' }}</span>
+      </th>
+      <th (click)="sortData('status')">
+        <span class="sort-icon">Status {{ sortDirection['status'] === 'asc' ? '▲' : '▼' }}</span>
+      </th>
+      <th>Ações</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let record of sortedData">
+      <td>{{ record.date }}</td>
+      <td>{{ record.entry }} - {{ record.exit }}</td>
+      <td>{{ record.type }}</td>
+      <td [ngClass]="getStatusClass(record.status)">
+        {{ record.status }}
+      </td>
+      <td>
+        <button
+          *ngFor="let action of record.actions"
+          [ngClass]="{'concluida-button': action === 'Concluída'}"
+          class="action-button">
+          <!-- Exibe a imagem apenas se a ação for "Concluída" -->
+          <img *ngIf="action === 'Concluída'" src="images/correct.svg" alt="Concluída" class="concluida-icon" />
+          <!-- Exibe o texto para outras ações -->
+          <span>{{ action }}</span>
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>

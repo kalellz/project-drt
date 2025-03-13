@@ -14,16 +14,15 @@ export interface AttendanceRecord {
   selector: 'app-table',
   templateUrl: './table.component.html',
   styleUrls: ['./table.component.scss'],
-  standalone: true, 
-  imports: [CommonModule] 
+  standalone: true,
+  imports: [CommonModule]
 })
 export class TableComponent {
   records: AttendanceRecord[] = [
     { date: 'Qua, 16 Out', entry: '07:30', exit: '????', type: 'Presencial', status: '● Em progresso...', actions: [] },
     { date: 'Ter, 15 Out', entry: '07:29', exit: '16:01', type: 'Presencial', status: '● Concluída', actions: [] },
     { date: 'Seg, 14 Out', entry: '08:15', exit: '16:00', type: 'Presencial', status: '● Atraso', actions: ['Justificar'] },
-    { date: 'Sex, 11 Out', entry: '10:00', exit: '16:00', type: 'Presencial', status: '● Justificada', actions: ['➤ Concluída'] },
-    { date: 'Qui, 10 Out', entry: '????', exit: '????', type: 'Home Office', status: '● Pendente', actions: ['Justificar'] },
+    { date: 'Sex, 11 Out', entry: '10:00', exit: '16:00', type: 'Presencial', status: '● Justificada', actions: ['Concluída'] },
     { date: 'Qui, 10 Out', entry: '????', exit: '????', type: 'Home Office', status: '● Pendente', actions: ['Justificar'] },
   ];
 
@@ -50,5 +49,10 @@ export class TableComponent {
       }
       return 0;
     });
+  }
+
+  getStatusClass(status: string): string {
+    const statusKey = status.replace(/[^a-zA-Z]/g, '').toLowerCase();
+    return `status-${statusKey}`;
   }
 }
