@@ -1,6 +1,7 @@
 import { Component, Input, HostListener, OnInit  } from '@angular/core';
 import { FormsModule } from '@angular/forms'; // Importe o FormsModule
 
+
 @Component({
   selector: 'app-filter',
   imports: [],

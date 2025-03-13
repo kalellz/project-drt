@@ -1,0 +1,41 @@
+.Table {
+    width: 99%; /* 99 pra não bugar */
+    overflow: auto; 
+    border-spacing: 0 .8em; 
+    font-size: .8em;
+    margin: 0 auto; /* Centraliza horizontalmente */
+
+    th {
+        margin: 0;
+        span{
+            cursor: pointer;
+        }
+        padding: .5em 2.5em;
+        text-align: left;
+        font-size: .8em;
+        color: #3C4261;
+        user-select: none;
+      }
+    
+    tbody tr {
+        background-color: #f4f4f4;
+        outline: 2px solid #D4D4D4; /* Simula uma borda no <tr> */
+        border-radius: 8px; /* Garante que a linha tenha bordas arredondadas */
+        
+        td:first-child {
+            border-top-left-radius: 8px;
+            border-bottom-left-radius: 8px;
+        }
+        td:last-child {
+            border-top-right-radius: 8px;
+            border-bottom-right-radius: 8px;
+        }
+        
+        th, td {
+            color: #3C4261;
+            padding: 1em 2em;
+            text-align: left;
+            font-weight: 600;
+        }
+    }
+}
