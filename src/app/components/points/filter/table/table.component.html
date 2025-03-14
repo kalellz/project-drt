@@ -25,7 +25,7 @@
       <td>
         <button
           *ngFor="let action of record.actions"
-          [ngClass]="{'concluida-button': action === 'Concluída'}"
+          [ngClass]="getButtonClasses(action, record.status)"
           class="action-button">
           <!-- Exibe a imagem apenas se a ação for "Concluída" -->
           <img *ngIf="action === 'Concluída'" src="images/correct.svg" alt="Concluída" class="concluida-icon" />

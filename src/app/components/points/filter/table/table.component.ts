@@ -55,4 +55,11 @@ export class TableComponent {
     const statusKey = status.replace(/[^a-zA-Z]/g, '').toLowerCase();
     return `status-${statusKey}`;
   }
+  getButtonClasses(action: string, status: string): { [key: string]: boolean } {
+    const classes = {
+      'concluida-button': action === 'Concluída',
+      [this.getStatusClass(status)]: action !== 'Concluída'
+    };
+    return classes;
+  }
 }

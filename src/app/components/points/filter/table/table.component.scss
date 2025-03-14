@@ -39,20 +39,28 @@
   }
 
   // Classes para os status
-  td.status-emprogresso {
+  td.status-emprogresso, .action-button.status-emprogresso {
     color: black;
   }
-  td.status-concluida {
-    color: blue;
+  td.status-concluda, .action-button.status-concluda {
+    color: #34B6FF;
   }
-  td.status-atraso {
+  td.status-atraso, .action-button.status-atraso {
     color: orange;
   }
-  td.status-justificada {
+  td.status-justificada, .action-button.status-justificada {
     color: green;
   }
-  td.status-pendente {
+  td.status-pendente, .action-button.status-pendente {
     color: red;
+  }
+  .action-button.status-atraso {
+    color: #fff;
+    background-color: orange; /* Cor de fundo para "Atraso" */
+  }
+  .action-button.status-pendente {
+    color: #fff;
+    background-color: red; /* Cor de fundo para "Pendente" */
   }
 
   // Estilo padrão dos botões
@@ -64,20 +72,22 @@
     font-weight: 600;
     display: flex;
     align-items: center;
-    background-color: transparent; // Fundo transparente
-    font-size: inherit; // Herda o tamanho da fonte do elemento pai
-
+    background-color: inherit;
+    transition: transform 0.5s;
     &:hover {
-      opacity: 0.8;
+      transform: scale(1.05) translateY(-1px);
     }
   }
 
   // Estilo específico para o botão de "Concluída"
   .concluida-button {
     user-select: none;
-    cursor: auto;
+    cursor: default;
     background-color: transparent; // Fundo transparente
     color: #27CA40; // Cor verde para o texto
+    &:hover{
+      transform: none;
+    }
   }
 
   // Estilo para o ícone dentro do botão
