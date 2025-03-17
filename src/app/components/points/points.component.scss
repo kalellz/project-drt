@@ -1,3 +1,5 @@
+@use './../../../styles' as styles;
+
 .points{
     width: 100vw;
     height: 100vh;
@@ -50,5 +52,52 @@
             }
             
         }
+        .point-button {
+            display: flex;
+            justify-content: flex-end;
+          
+            button {
+                height: 60%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 0; /* Remove o padding padrão */
+                border: none;
+                background-color: transparent;
+                cursor: pointer;
+                overflow: hidden; /* Para esconder o texto que "transborda" durante a animação */
+                position: relative;
+                border-radius: 2em; /* Bordas arredondadas para o botão inteiro */
+                border: solid styles.$primary-color 1px; /* Borda do botão */
+                background-color: styles.$primary-color; /* Cor de fundo do botão */
+            }
+          
+            .icone {
+              width: 1vw;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              transition: transform 0.3s ease;
+              color: #fff; /* Cor do ícone */
+              font-size: 1.5em; /* Tamanho do ícone */
+              border-radius: 2em 0 0 2em; /* Bordas arredondadas apenas no lado esquerdo */
+              padding-left: .6em;
+            }
+          
+            .texto {
+              opacity: 0;
+              width: 0; /* Começa com largura zero */
+              white-space: nowrap; /* Impede que o texto quebre em várias linhas */
+              transition: opacity 0.3s ease, width 0.3s ease;
+              color: #fff; /* Cor do texto */
+              font-size: 1em; /* Tamanho do texto */
+              padding-right: 1em; /* Espaçamento interno à direita */
+            }
+          
+            .expandir {
+              opacity: 1;
+              width: 7vw; /* Ajuste a largura conforme necessário */
+            }
+          }
     }
 }

@@ -13,8 +13,19 @@
             <div class="point-table-main">
                 <app-table />
             </div>
-            <div>
-                <button><img src=""></button>
+            <div class="point-button">
+                <button 
+                    (click)="navigateAdd()" 
+                    (mouseenter)="onMouseEnter()" 
+                    (mouseleave)="onMouseLeave()" 
+                    class="meu-botao">
+                    <span class="icone" [ngClass]="{'esconder-texto': mostrarTexto}">
+                        <p class="fas fa-icon">+</p> 
+                    </span>
+                    <span class="texto" [ngClass]="{'expandir': mostrarTexto}">
+                        {{ textoBotao }}
+                      </span>
+                </button>
             </div>
         </div>
     </section>
