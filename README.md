@@ -3,7 +3,7 @@
 Um sistema web para controle de ponto e gerenciamento de equipes, desenvolvido em **Angular** para o frontend e **Deno + PostgreSQL** para o backend.
 
 ## 🌎 Demonstração
-🚧 *Adicione aqui o link da aplicação quando estiver hospedada.*
+🚧 
 
 ---
 
