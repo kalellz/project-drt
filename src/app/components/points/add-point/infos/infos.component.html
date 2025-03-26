@@ -1,0 +1,11 @@
+<div class="Infos "[ngClass]="{'Infos-Desactive' : dable}">
+    <img [src]="icon">
+    <div class="Infos-Texts">
+        <h1>{{title}}</h1>
+        <p>{{desc}}</p>
+    </div>
+    <div class="Infos-Timer">
+        <p *ngIf="dable">Planejado</p>
+        <h1>{{time}}</h1>
+    </div>
+</div>

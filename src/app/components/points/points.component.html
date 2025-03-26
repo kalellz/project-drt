@@ -1,6 +1,7 @@
 <app-sidebar />
 <app-header />
 <main class="points">
+    
     <section class="points-main">
         <h1>Meus Pontos</h1>
         <div class="point-table">
@@ -15,7 +16,7 @@
             </div>
             <div class="point-button">
                 <button 
-                    (click)="navigateAdd()" 
+                    (click)="showAddPoint()" 
                     (mouseenter)="onMouseEnter()" 
                     (mouseleave)="onMouseLeave()" 
                     class="meu-botao">
@@ -28,5 +29,8 @@
                 </button>
             </div>
         </div>
+    </section>
+    <section  *ngIf="mostrarAddPoint" class="Add-Point" >
+        <app-add-point />
     </section>
 </main>
