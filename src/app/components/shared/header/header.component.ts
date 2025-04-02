@@ -1,8 +1,10 @@
-import { Component} from '@angular/core';
+import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-header',
-  imports: [],
+  standalone: true,
+  imports: [CommonModule],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
@@ -12,6 +14,6 @@ export class HeaderComponent {
   toggleSearch() {
     this.isSearchVisible = !this.isSearchVisible;
   }
-  userStatus: 'online' | 'offline' = 'online'; // Alterne entre 'online' e 'offline
-  bellStatus: 'have' | 'dhave' = 'have'; // Alterne entre 'online' e 'offline
+  userStatus: 'online' | 'offline' = 'online'; // Alterne entre 'online' e 'offline'
+  bellStatus: 'have' | 'dhave' = 'have'; // Alterne entre 'online' e 'offline'
 }

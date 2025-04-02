@@ -1,44 +1,37 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { Router, ActivatedRoute, NavigationEnd } from '@angular/router'; // Importe o Router
-import { filter } from 'rxjs/operators'; // Importe o operador filter do RxJS
-
+import { Router, ActivatedRoute, NavigationEnd } from '@angular/router';
+import { filter } from 'rxjs/operators';
 
 @Component({
   selector: 'app-sidebar',
+  standalone: true,
   imports: [RouterModule, CommonModule],
   templateUrl: './sidebar.component.html',
   styleUrl: './sidebar.component.scss'
 })
-export class SidebarComponent {
+export class SidebarComponent implements OnInit {
   selectedItem: string = '/';
 
   constructor(private router: Router, private activatedRoute: ActivatedRoute) {}
 
   sideBarItems = [
     { title: 'Dashboard',     icon: 'images/dash.svg',  route: '/' },
-    { title: 'Perfil',        icon: 'images/user.svg',     route: '/profile'   },
-    { title: 'Configurações', icon: 'images/settings.svg',   route: '/settings'  },
-    { title: 'Pontos',   icon: 'images/diploma.svg',     route: '/points'    },
-    { title: 'Equipe', icon: 'images/team.svg',       route: '/team'      }
+    { title: 'Equipe',        icon: 'images/team.svg',  route: '/team' },
+    { title: 'Pontos',        icon: 'images/points.svg', route: '/points' },
+    { title: 'Configurações', icon: 'images/settings.svg', route: '/settings' }
   ];
-  ngOnInit() {
-    // Atualiza o selectedItem com base na rota atual ao carregar o componente
-    this.selectedItem = this.router.url;
 
-    // Observa as mudanças de rota e atualiza o selectedItem
-    this.router.events
-      .pipe(
-        filter((event) => event instanceof NavigationEnd) // Filtra apenas eventos de NavigationEnd
-      )
-      .subscribe((event: NavigationEnd) => {
-        this.selectedItem = event.url; // Atualiza o selectedItem com a rota atual
-      });
+  ngOnInit() {
+    this.router.events.pipe(
+      filter(event => event instanceof NavigationEnd)
+    ).subscribe(() => {
+      this.selectedItem = this.router.url;
+    });
   }
 
   setActive(route: string) {
-    this.selectedItem = route; // Define o item selecionado
-    this.router.navigate([route]); // Navega para a rota
+    this.selectedItem = route;
   }
 }
