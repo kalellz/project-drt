@@ -5,11 +5,10 @@
     </section>
     <ul class="sidebar-content">
         <li *ngFor="let item of sideBarItems"
-            (click)="setActive(item.route)"
             [class.sidebar-item-select]="selectedItem === item.route"
             class="sidebar-item">
             <img [src]="item.icon">
-            <a>{{ item.title }}</a>
+            <a [routerLink]="item.route">{{ item.title }}</a>
         </li>                          
     </ul>  
 </main>

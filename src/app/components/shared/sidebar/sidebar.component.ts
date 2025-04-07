@@ -24,14 +24,17 @@ export class SidebarComponent implements OnInit {
   ];
 
   ngOnInit() {
+    this.selectedItem = this.router.url;
+
     this.router.events.pipe(
       filter(event => event instanceof NavigationEnd)
-    ).subscribe(() => {
-      this.selectedItem = this.router.url;
+    ).subscribe((event: NavigationEnd) => {
+      this.selectedItem = event.url;
     });
   }
 
   setActive(route: string) {
     this.selectedItem = route;
+    this.router.navigate([route]);
   }
 }
